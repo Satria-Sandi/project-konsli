@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Konversi</title>
+</head>
+<body>
+    <script>
+        // Konversi Mata Uang
+        let mataUang = prompt("Masukkan kurs yang diinginkan (USD, EUR, JPY, IDR, RUB, CNY, SAR, MYR, BND, QAR, KWD): ");
+        let nilai = parseFloat(prompt("Masukkan nilai mata uang: "));
+        let konversi = prompt("Masukkan kurs yang diinginkan (USD, EUR, JPY, IDR, RUB, CNY, SAR, MYR, BND, QAR, KWD): ");
+        let hasil = 0;
+
+        function konversiMataUang(mataUang, nilai, konversi) {
+            // Validasi jika mata uang tidak ditemukan
+            let mataUangTersedia = ["USD", "EUR", "JPY", "IDR", "RUB", "CNY", "SAR", "MYR", "BND", "QAR", "KWD"];
+            
+            if (!mataUangTersedia.includes(mataUang) || !mataUangTersedia.includes(konversi) || isNaN(nilai)) {
+                console.info("Mata uang atau nilai tidak valid, silakan coba lagi.");
+                return;
+            }
+
+            if (mataUang == "USD") {
+                if (konversi == "USD") {
+                    hasil = nilai;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.85;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 110.22;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 14425.00;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 93.00;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 7.29;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 3.75;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 4.18;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 1.36;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 3.64;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.31;
+                }
+            } else if (mataUang == "EUR") {
+                if (konversi == "USD") {
+                    hasil = nilai * 1.18;
+                } else if (konversi == "EUR") {
+                    hasil = nilai;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 130.91;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 17125.00;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 109.41;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 8.59;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 4.40;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 4.91;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 1.60;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 4.28;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.37;
+                }
+            } else if (mataUang == "JPY") {
+                if (konversi == "USD") {
+                    hasil = nilai * 0.0091;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.0076;
+                } else if (konversi == "JPY") {
+                    hasil = nilai;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 130.91;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 0.71;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 0.066;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 0.034;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 0.038;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 0.012;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 0.033;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.0028;
+                }
+            } else if (mataUang == "IDR") {
+                if (konversi == "USD") {
+                    hasil = nilai * 0.000069;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.000058;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 0.0076;
+                } else if (konversi == "IDR") {
+                    hasil = nilai;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 0.0065;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 0.00051;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 0.00026;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 0.00029;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 0.000094;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 0.00026;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.000022;
+                }
+            } else if (mataUang == "RUB") {
+                if (konversi == "USD") {
+                    hasil = nilai * 0.011;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.0091;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 1.41;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 15.37;
+                } else if (konversi == "RUB") {
+                    hasil = nilai;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 0.078;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 0.040;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 0.045;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 0.015;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 0.039;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.0034;
+                }
+            } else if (mataUang == "CNY") {
+                if (konversi == "USD") {
+                    hasil = nilai * 0.14;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.12;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 15.14;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 1978.22;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 12.84;
+                } else if (konversi == "CNY") {
+                    hasil = nilai;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 0.51;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 0.57;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 0.19;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 0.50;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.043;
+                }
+            } else if (mataUang == "SAR") {
+                if (konversi == "USD") {
+                    hasil = nilai * 0.27;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.23;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 29.59;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 3852.97;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 25.37;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 1.95;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 1.19;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 0.27;
+                } else if (konversi == "QAR") {
+                    hasil = nilai;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.072;
+                }
+            } else if (mataUang == "MYR") {
+                if (konversi == "USD") {
+                    hasil = nilai * 0.24;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.20;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 27.20;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 3445.28;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 22.22;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 1.75;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 0.84;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 0.24;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 0.93;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.074;
+                }
+            } else if (mataUang == "BND") {
+                if (konversi == "USD") {
+                    hasil = nilai * 0.74;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.63;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 94.42;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 11816.16;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 78.72;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 5.50;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 2.75;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 4.16;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 2.61;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.20;
+                }
+            } else if (mataUang == "QAR") {
+                if (konversi == "USD") {
+                    hasil = nilai * 0.27;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 0.23;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 29.74;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 3855.19;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 25.50;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 1.98;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 0.99;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 1.07;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 0.73;
+                } else if (konversi == "KWD") {
+                    hasil = nilai * 0.073;
+                }
+            } else if (mataUang == "KWD") {
+                if (konversi == "USD") {
+                    hasil = nilai * 3.32;
+                } else if (konversi == "EUR") {
+                    hasil = nilai * 2.84;
+                } else if (konversi == "JPY") {
+                    hasil = nilai * 456.80;
+                } else if (konversi == "IDR") {
+                    hasil = nilai * 59891.50;
+                } else if (konversi == "RUB") {
+                    hasil = nilai * 401.90;
+                } else if (konversi == "CNY") {
+                    hasil = nilai * 30.14;
+                } else if (konversi == "SAR") {
+                    hasil = nilai * 13.90;
+                } else if (konversi == "MYR") {
+                    hasil = nilai * 13.46;
+                } else if (konversi == "BND") {
+                    hasil = nilai * 5.07;
+                } else if (konversi == "QAR") {
+                    hasil = nilai * 13.70;
+                }
+            } else {
+                console.info("Mata uang tidak ditemukan, silakan coba lagi.");
+                return;
+            }
+            console.log(`Hasil konversi dari ${nilai} ${mataUang} ke ${konversi} adalah ${hasil} ${konversi}`);
+        }
+
+    konversiMataUang(mataUang, nilai, konversi);
+    console.info("Konversi mata uang selesai");
+
+    </script>
+</body>
+</html>
+
