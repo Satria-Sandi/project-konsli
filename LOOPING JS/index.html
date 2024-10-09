@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: white;">
+    <script>
+        // Meminta pengguna memasukkan jumlah data yang akan diinputkan
+        let jumlah = prompt("Masukkan jumlah data yang diinput : ");
+        
+        // Deklarasi array untuk menyimpan data dan variabel untuk perhitungan
+        let data = [];
+        let total = 0;
+        let rata = 0;
+        let max = 0;
+        let min = 0;
+        
+        // Loop untuk memasukkan data sesuai jumlah yang telah dimasukkan pengguna
+        for (let i = 0; i < jumlah; i++) {
+            // Meminta pengguna memasukkan data ke-i
+            data[i] = prompt("Masukkan data ke-" + (i + 1) + " : ");
+            
+            // Menambahkan nilai data ke dalam total setelah diubah menjadi integer
+            total += parseInt(data[i]);
+            
+            // Menghitung rata-rata sementara setelah setiap input
+            rata = total / jumlah;
+            
+            // Pada iterasi pertama, set nilai max dan min ke data pertama
+            if (i == 0) {
+                max = data[i];
+                min = data[i];
+            } else {
+                // Update nilai maksimum jika data saat ini lebih besar dari max
+                if (data[i] > max) {
+                    max = data[i];
+                }
+                // Update nilai minimum jika data saat ini lebih kecil dari min
+                if (data[i] < min) {
+                    min = data[i];
+                }
+            }
+        }
+        
+        // Menampilkan data yang telah diinputkan dalam bentuk tabel pada console
+        console.table(data);
+        
+        // Menampilkan total nilai data yang diinputkan
+        console.table("Total: " + total);
+        
+        // Menampilkan nilai rata-rata data
+        console.table("Rata-rata: " + rata);
+        
+        // Menampilkan nilai tertinggi dari data yang diinputkan
+        console.table("Nilai tertinggi : " + max);
+        
+        // Menampilkan nilai terendah dari data yang diinputkan
+        console.table("Nilai terendah : " + min);
+    </script>
+</body>
+</html>
