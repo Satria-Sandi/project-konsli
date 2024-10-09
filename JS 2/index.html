@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilangan Prima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script async defer src="script.js"></script>
+    <div class="wrapper">
+        <h1>
+            <label for="input">
+                Bilangan Prima
+            </label>
+        </h1>
+        <input type="number" name="input" id="input" value="17" max="9007199254740991" min="1">
+        <output for="input" id="output"></output>
+    </div>
+
+    <script>
+"use strict";
+
+/** @type {HTMLInputElement} */
+const input = document.getElementById('input');
+/** @type {HTMLOutputElement} */
+const output = document.getElementById('output');
+
+/** @param {number} value */
+function calculate(value) {
+    if(value < 2) {
+        output.textContent = "Bilangan ini bukan bilangan prima.";
+        return;
+    }
+
+    const maxCheckedFactor = Math.sqrt(value);
+    for(let factor = 2; factor <= maxCheckedFactor; factor++) {
+        if(value % factor === 0) {
+            output.textContent = `Tidak, bilangan ini dapat dibagi menjadi ${factor}.`;
+            return;
+        }
+    }
+
+    output.textContent = "Bilangan tersebut bilangan prima.";
+}
+
+input.addEventListener('input', function() {
+    const value = parseInt(input.value, 10);
+
+    if(isNaN(value)) {
+        output.textContent = "Bilangan tidak valid.";
+        return;
+    }
+
+    if(value > Number.MAX_SAFE_INTEGER) {
+        output.textContent = `Bilangan terlalu besar, maksimal ${Number.MAX_SAFE_INTEGER}.`;
+        return;
+    }
+
+    calculate(value);
+});
+
+    </script>
+</body>
+</html>
