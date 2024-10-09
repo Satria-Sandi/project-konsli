@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-image: url("bg2.jpg");
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img.profile-pic {
+    float: right;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 150px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.bio {
+    grid-column: span 2;
+}
+
+h3, h3 {
+    margin: 0 0 10px;
+    color: white;
+}
+
+p {
+    margin: 5px 0;
+    color: white;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: white;
+}
+
+.about, .education, .skills {
+    grid-column: span 2;
+}
+
+.about p, .education ul, .skills ul {
+    padding-left: 15px;
+    margin-top: 0;
+}

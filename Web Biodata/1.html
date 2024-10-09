@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function tambahSekolahOtomatis() {
+            // Buat elemen list baru untuk Universitas ITS
+            let li = document.createElement("li");
+            li.textContent = "Universitas ITS";
+
+            // Tambahkan elemen tersebut ke dalam daftar pendidikan
+            document.getElementById("daftarSekolah").appendChild(li);
+        }
+
+        function tambahPengalamanKerja() {
+            // Buat elemen list baru untuk pengalaman kerja
+            let li = document.createElement("li");
+            li.textContent = "Tidak memiliki pengalaman kerja";
+
+            // Tambahkan elemen tersebut ke dalam daftar pengalaman kerja
+            document.getElementById("daftarPengalaman").appendChild(li);
+        }
+
+        // Jalankan fungsi saat halaman selesai dimuat
+        window.onload = function() {
+            tambahSekolahOtomatis();
+            tambahPengalamanKerja();
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="bio">
+            <img class="profile-pic" src="pro.jpeg" alt="Foto Profil">
+            <h3>PROFIL</h3>
+            <p><strong>Nama:</strong> Sandi Satriawan</p>
+            <p><strong>Alamat:</strong> Jl. Karang Rejo, Surabaya</p>
+            <p><strong>Tanggal Lahir:</strong> 4 AGUSTUS 2007</p>
+            <p><strong>Email:</strong> sandiawan@gmail.com</p>
+            <p><strong>Telepon:</strong> +62 812-1733-4399</p>
+        </div>
+        <div class="about">
+            <h3>Tentang Saya</h3>
+            <p>Saya adalah seorang pelajar yang memiliki minat</p>
+            <p>pada bidang Informatika dan Teknik Komputer.</p>
+        </div>
+        <div class="education">
+            <h3>Pendidikan</h3>
+            <ul id="daftarSekolah">
+                <li>SD WONOKROMO 1/KETINTANG 1</li>
+                <li>SMPN 32</li>
+                <li>SMK NEGERI 1 SURABAYA</li>
+            </ul>
+        </div>
+
+        <!-- Bagian Pengalaman Kerja -->
+        <div class="experience">
+            <h3>Pengalaman Kerja</h3>
+            <ul id="daftarPengalaman">
+                <!-- Daftar pengalaman kerja akan diisi otomatis oleh JavaScript -->
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h3>Keahlian</h3>
+            <ul>
+                <li>Desain</li>
+                <li>Program HTML</li>
+                <li>Program CSS</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
