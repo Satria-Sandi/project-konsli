@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+.red {
+  background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>Tabel Perkalian</h2>
+
+<table>
+    
+  <tr>
+    <th></th>
+    <th class="red">1</th>
+    <th class="red">2</th>
+    <th class="red">3</th>
+    <th class="red">4</th>
+    <th class="red">5</th>
+    <th class="red">6</th>
+    <th class="red">7</th>
+    <th class="red">8</th>
+    <th class="red">9</th>
+  </tr>
+  <tr>
+    <th class="yellow">1</th>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <th class="yellow">2</th>
+    <td>2</td>
+    <td>4</td>
+    <td>6</td>
+    <td>8</td>
+    <td>10</td>
+    <td>12</td>
+    <td>14</td>
+    <td>16</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <th  class="yellow">3</th>
+    <td>3</td>
+    <td>6</td>
+    <td>9</td>
+    <td>12</td>
+    <td>15</td>
+    <td>18</td>
+    <td>21</td>
+    <td>24</td>
+    <td>27</td>
+  </tr>
+  <tr>
+    <th class="yellow">4</th>
+    <td>4</td>
+    <td>8</td>
+    <td>12</td>
+    <td>16</td>
+    <td>20</td>
+    <td>24</td>
+    <td>28</td>
+    <td>32</td>
+    <td>36</td>
+  </tr>
+  <tr>
+    <th  class="yellow">5</th>
+    <td>5</td>
+    <td>10</td>
+    <td>15</td>
+    <td>20</td>
+    <td>25</td>
+    <td>30</td>
+    <td>35</td>
+    <td>40</td>
+    <td>45</td>
+  </tr>
+  <tr>
+    <th class="yellow">6</th>
+    <td>6</td>
+    <td>12</td>
+    <td>18</td>
+    <td>24</td>
+    <td>30</td>
+    <td>36</td>
+    <td>42</td>
+    <td>48</td>
+    <td>54</td>
+  </tr>
+  <tr>
+    <th  class="yellow">7</th>
+    <td>7</td>
+    <td>14</td>
+    <td>21</td>
+    <td>28</td>
+    <td>35</td>
+    <td>42</td>
+    <td>49</td>
+    <td>56</td>
+    <td>63</td>
+  </tr>
+  <tr>
+    <th class="yellow">8</th>
+    <td>8</td>
+    <td>16</td>
+    <td>24</td>
+    <td>32</td>
+    <td>40</td>
+    <td>48</td>
+    <td>56</td>
+    <td>64</td>
+    <td>72</td>
+  </tr>
+  <tr>
+    <th  class="yellow">9</th>
+    <td>9</td>
+    <td>18</td>
+    <td>27</td>
+    <td>36</td>
+    <td>45</td>
+    <td>54</td>
+    <td>63</td>
+    <td>72</td>
+    <td>81</td>
+  </tr>
+</table>
+
+<script>
+// Mencari elemen tabel
+const table = document.querySelector('table');
+
+// Mengisi sel tabel dengan hasil perkalian
+for (let i = 1; i <= 9; i++) {
+  for (let j = 1; j <= 9; j++) {
+    const cell = table.rows[i].cells[j];
+    cell.textContent = i * j;
+  }
+}
+</script>
+
+</body>
+</html>
