@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: topik utama;
+}
+
+.item3 {
+  grid-area: Content;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item3 .row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.item3 .row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.item3 .row-2 > *, .item3 .row-3 > * {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.split-1-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.split-1-2 div {
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.item5 {
+  grid-area: Navbar;
+}
+
+.iklan-kiri {
+  grid-area: iklan-kiri;
+}
+
+.iklan-kanan {
+  grid-area: iklan-kanan;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "iklan-kiri header  header iklan-kanan"
+    "iklan-kiri Navbar  Navbar iklan-kanan"
+    "iklan-kiri Content topik-utama   iklan-kanan";
+  grid-template-rows: 1fr 1fr auto;
+  grid-template-columns: 0.5fr 5fr 1fr 0.5fr;
+  gap: 10px;
+  background-color: #f59a11;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid-container>div {
+  background-color: rgba(238, 233, 233, 0.952);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+@media (max-width: 550px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header"
+      "topik-utama"
+      "content"
+      "navbar";
+  }
+}
